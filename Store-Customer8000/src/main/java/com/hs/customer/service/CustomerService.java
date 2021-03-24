@@ -1,9 +1,6 @@
 package com.hs.customer.service;
 
 import com.hs.entity.Customer;
-import com.hs.entity.CustomerMessage;
-
-import java.util.List;
 
 /**
  * @author Huasheng

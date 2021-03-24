@@ -2,9 +2,7 @@ package com.hs.customer.controller;
 
 import com.hs.customer.service.CustomerService;
 import com.hs.entity.Customer;
-import com.hs.entity.CustomerMessage;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

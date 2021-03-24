@@ -2,13 +2,8 @@ package com.hs.customer.Dao;
 
 
 import com.hs.entity.Customer;
-import com.hs.entity.CustomerMessage;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
-
-import java.util.List;
-
 /**
  * @author Huasheng
  * @Auther: 华生
