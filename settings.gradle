@@ -1,0 +1,9 @@
+rootProject.name = 'HuashengStore'
+include 'Store-Gateway7000'
+include 'Store-Customer8000'
+include 'Store-Common'
+include 'Store-Seata-Account8100'
+include 'Store-Seata-Order8110'
+include 'Store-Seata-Storage8120'
+include 'Store-CustomerMessage8010'
+

@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+}
+
+group 'com.hs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.10'
+    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    implementation'mysql:mysql-connector-java:8.0.22'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
+    implementation'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.2.3.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.3.5.RELEASE'
+    implementation 'org.apache.rocketmq:rocketmq-client:4.8.0'
+    implementation('com.alibaba.cloud:spring-cloud-starter-alibaba-seata:2.2.5.RELEASE') {
+        exclude group: 'io.seata', module: 'seata-all'
+        exclude group: 'io.seata', module: 'seata-spring-boot-starter'
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
+    }
+    implementation'io.seata:seata-all:1.4.1'
+    implementation'com.alibaba:druid-spring-boot-starter:1.2.4'
+    implementation project(":Store-Common")
+
+}
+
+test {
+    useJUnitPlatform()
+}

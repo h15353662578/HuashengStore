@@ -1,0 +1,16 @@
+# Project exclude paths
+/.gradle/
+/build/
+/Store-Common/build/
+/Store-Customer8000/build/
+/Store-Customer8000/out/
+/Store-Customer8000/out/production/classes/
+/Store-CustomerMessage8010/build/
+/Store-CustomerMessage8010/out/
+/Store-CustomerMessage8010/out/production/classes/
+/Store-Gateway7000/build/
+/Store-Gateway7000/out/
+/Store-Gateway7000/out/production/classes/
+/Store-Seata-Account8100/build/
+/Store-Seata-Order8110/build/
+/Store-Seata-Storage8120/build/

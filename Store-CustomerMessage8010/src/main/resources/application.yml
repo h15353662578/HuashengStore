@@ -1,0 +1,27 @@
+server:
+  port: 8010
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/store?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 000000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.195.129:80
+    alibaba:
+      seata:
+        tx-service-group: hs_store_group
+  application:
+    name: customer-message
+
+mybatis-plus:
+    configuration:
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  level:
+    io:
+      seata: info

@@ -1,0 +1,42 @@
+server:
+  port: 7000
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.195.129:80
+        service: gateway
+    gateway:
+      routes: # 路由数组
+        - id: store-customer # 路由的id,没有规定规则但要求唯一,建议配合服务名
+          uri: http://localhost:8000 #匹配后提供服务的路由地址
+          predicates: # 断言，路径相匹配的进行路由
+            - Path=/customer/** #**为通配符，因为我们controller方法中get后面跟查询的id
+            - Path=/customerMessage/**
+      filter:
+        remove-hop-by-hop:
+          headers:
+            - trailer
+            - te
+            - keep-alive
+            - transfer-encoding
+            - upgrade
+            - proxy-authenticate
+            - connection
+            - proxy-authorization
+            - x-application-context
+            # 以下是去掉服务层面定义的跨域
+            - access-control-allow-credentials
+            - access-control-allow-headers
+            - access-control-allow-methods
+            - access-control-allow-origin
+            - access-control-max-age
+            - vary
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+            maxAge: 3628800

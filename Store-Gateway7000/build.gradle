@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.hs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.18'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
+    implementation('mysql:mysql-connector-java:8.0.22')
+    implementation('org.springframework.cloud:spring-cloud-starter-gateway:2.2.5.RELEASE')
+//    implementation 'org.springframework.cloud:spring-cloud-security:2.2.4.RELEASE'
+    implementation 'org.springframework.cloud:spring-cloud-starter-oauth2:2.2.4.RELEASE'
+    implementation('com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.2.3.RELEASE')
+
+}
+
+test {
+    useJUnitPlatform()
+}
