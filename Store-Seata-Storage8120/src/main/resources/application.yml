@@ -1,0 +1,29 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: store-customerAccount-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: hs_tx_group
+    nacos:
+      discovery:
+        server-addr: 192.168.195.129:80
+    sentinel:
+      transport:
+        dashboard: 192.168.195.129:8858
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 192.168.195.129:80
+            dataId: store-customerAccount-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/store_storage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 000000

@@ -1,4 +1,6 @@
-
+plugins{
+    id'java'
+}
 group 'com.hs'
 version '1.0-SNAPSHOT'
 
@@ -7,15 +9,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
 
 }
 
 test {
     useJUnitPlatform()
 }
-
-apply plugin: 'java'
-apply plugin: 'war'
-apply plugin: 'org.springframework.boot'

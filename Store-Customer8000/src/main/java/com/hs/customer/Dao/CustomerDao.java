@@ -19,7 +19,7 @@ public interface CustomerDao {
      * @param customer
      * @return
      */
-    @Insert("insert into customer(customer_id,customer_name,customer_username,customer_password) values(#{customerId},#{customerName},#{customerUserName},#{customerPassword})")
+    @Insert("insert into customer(customer_name,customer_username,customer_password) values(#{customerName},#{customerUserName},#{customerPassword})")
     public void add(Customer customer);
 
 }

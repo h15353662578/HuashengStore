@@ -16,4 +16,5 @@ public interface CustomerMessageService {
 
     public List<CustomerMessage> findAll();
 
+    public void add(CustomerMessage customerMessage);
 }

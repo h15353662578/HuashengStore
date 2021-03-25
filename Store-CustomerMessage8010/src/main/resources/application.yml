@@ -11,11 +11,12 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.195.129:80
+        service: customer-message-service
     alibaba:
       seata:
         tx-service-group: hs_store_group
   application:
-    name: customer-message
+    name: customer-message-service
 
 mybatis-plus:
     configuration:

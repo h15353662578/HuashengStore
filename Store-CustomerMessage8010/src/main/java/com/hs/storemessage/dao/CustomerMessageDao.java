@@ -1,6 +1,7 @@
 package com.hs.storemessage.dao;
 
 import com.hs.entity.CustomerMessage;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -29,4 +30,7 @@ public interface CustomerMessageDao {
      */
     @Select("select * from customer_message where customer_username=#{customerUserName}")
     public CustomerMessage findOne(String customerUserName);
+
+    @Insert("insert into customer_message (create_date) values(#{createDate})")
+    public void  add(CustomerMessage customerMessage);
 }

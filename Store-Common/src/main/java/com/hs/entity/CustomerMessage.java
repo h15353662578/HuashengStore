@@ -12,19 +12,15 @@ import java.util.Date;
  */
 @Data
 public class CustomerMessage {
-    private int id;
-
     private int customerId;
-
-    private String customerUserName;
-
-    private String customerPhone;
 
     private int customerSex;
 
     private int customerAge;
 
-    private Date customerCreateDate;
+    private String customerPhone;
+
+    private Date createDate;
 
     private String customerAddress;
 

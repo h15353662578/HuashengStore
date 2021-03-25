@@ -2,13 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.m2/resp/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.10/625fc0055674dff70dbc76efa36d0f2c89b04a24/lombok-1.18.10.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar" />
         </processorPath>
         <module name="HuashengStore.Store-CustomerMessage8010.main" />
+        <module name="HuashengStore.Store-Gateway7000.main" />
+        <module name="HuashengStore.main" />
         <module name="HuashengStore.Store-Common.main" />
+        <module name="HuashengStore.Store-Seata-Account8100.main" />
+        <module name="HuashengStore.Store-Seata-Order8110.main" />
+        <module name="HuashengStore.Store-Seata-Storage8120.main" />
         <module name="HuashengStore.Store-Customer8000.main" />
       </profile>
     </annotationProcessing>

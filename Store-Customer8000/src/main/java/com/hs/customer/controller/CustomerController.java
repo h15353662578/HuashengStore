@@ -2,9 +2,7 @@ package com.hs.customer.controller;
 
 import com.hs.customer.service.CustomerService;
 import com.hs.entity.Customer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -21,8 +19,8 @@ public class CustomerController {
     @Resource
     private CustomerService customerService;
 
-    @GetMapping("/add")
-    public void add(Customer customer){
+    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    public void add(@RequestParam Customer customer){
         customerService.add(customer);
     }
 

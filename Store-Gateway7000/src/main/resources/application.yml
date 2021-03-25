@@ -8,10 +8,13 @@ spring:
         service: gateway
     gateway:
       routes: # 路由数组
-        - id: store-customer # 路由的id,没有规定规则但要求唯一,建议配合服务名
+        - id: customer # 路由的id,没有规定规则但要求唯一,建议配合服务名
           uri: http://localhost:8000 #匹配后提供服务的路由地址
           predicates: # 断言，路径相匹配的进行路由
             - Path=/customer/** #**为通配符，因为我们controller方法中get后面跟查询的id
+        - id: customer-message
+          uri: http://localhost:8010
+          predicates:
             - Path=/customerMessage/**
       filter:
         remove-hop-by-hop:
