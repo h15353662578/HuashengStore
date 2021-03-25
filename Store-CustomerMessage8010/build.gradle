@@ -26,7 +26,7 @@ dependencies {
     implementation'io.seata:seata-all:1.4.1'
     implementation'com.alibaba:druid-spring-boot-starter:1.2.4'
     implementation project(":Store-Common")
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.1'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.3.RELEASE'
 }
 
 test {
