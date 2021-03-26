@@ -2,6 +2,8 @@ package com.hs.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author Huasheng
  * @Auther: 华生
@@ -10,7 +12,7 @@ import lombok.Data;
  */
 
 @Data
-public class CustomerAccount {
+public class CustomerAccount implements Serializable {
 
     private int id;
 

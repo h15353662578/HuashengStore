@@ -1,10 +1,10 @@
 package com.hs.customer.service.impl;
 
 import com.hs.customer.Dao.CustomerDao;
-import com.hs.customer.service.CustomerMessageService;
 import com.hs.customer.service.CustomerService;
 import com.hs.entity.Customer;
 import com.hs.entity.CustomerMessage;
+import com.hs.storemessage.service.CustomerMessageService;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.context.annotation.Bean;

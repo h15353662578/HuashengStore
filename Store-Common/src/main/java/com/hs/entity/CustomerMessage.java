@@ -2,6 +2,7 @@ package com.hs.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -10,8 +11,7 @@ import java.util.Date;
  * @Date: 2021/03/23/15:44
  * @Description:用户详细信息
  */
-@Data
-public class CustomerMessage {
+public class CustomerMessage implements Serializable {
     private int customerId;
 
     private int customerSex;
@@ -24,4 +24,63 @@ public class CustomerMessage {
 
     private String customerAddress;
 
+    public int getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
+    }
+
+    public int getCustomerSex() {
+        return customerSex;
+    }
+
+    public void setCustomerSex(int customerSex) {
+        this.customerSex = customerSex;
+    }
+
+    public int getCustomerAge() {
+        return customerAge;
+    }
+
+    public void setCustomerAge(int customerAge) {
+        this.customerAge = customerAge;
+    }
+
+    public String getCustomerPhone() {
+        return customerPhone;
+    }
+
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getCustomerAddress() {
+        return customerAddress;
+    }
+
+    public void setCustomerAddress(String customerAddress) {
+        this.customerAddress = customerAddress;
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerMessage{" +
+                "customerId=" + customerId +
+                ", customerSex=" + customerSex +
+                ", customerAge=" + customerAge +
+                ", customerPhone='" + customerPhone + '\'' +
+                ", createDate=" + createDate +
+                ", customerAddress='" + customerAddress + '\'' +
+                '}';
+    }
 }

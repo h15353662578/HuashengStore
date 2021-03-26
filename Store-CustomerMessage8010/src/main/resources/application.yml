@@ -32,7 +32,7 @@ dubbo:
     port: -1
     name: dubbo
   scan: # dubbo服务路径
-    base-packages: com.hs.storemessage
+    base-packages: com.hs.storemessage.service
   application:
     qos-enable: false #关闭dubbo在线运维工具
   registry:

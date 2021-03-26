@@ -1,4 +1,4 @@
-package com.hs.storemessage.comtroller;
+package com.hs.storemessage.controller;
 
 import com.hs.entity.CustomerMessage;
 import com.hs.storemessage.service.CustomerMessageService;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequestMapping("/customerMessage")
 public class CustomerMessageController {
 
-    @Reference
+    @Resource
     private CustomerMessageService customerMessageService;
 
     @GetMapping("/findOne/{customerUserName}")

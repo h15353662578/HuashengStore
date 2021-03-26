@@ -2,6 +2,8 @@ package com.hs.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author Huasheng
  * @Auther: 华生
@@ -9,7 +11,7 @@ import lombok.Data;
  * @Description:
  */
 @Data
-public class ProductStorage {
+public class ProductStorage implements Serializable {
 
     private int id;
 
