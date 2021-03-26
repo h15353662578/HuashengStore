@@ -44,6 +44,8 @@ dependencies {
     compileOnly 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR10'
     implementation'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.2.3.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-jdbc:2.3.5.RELEASE'
+    implementation 'com.alibaba.cloud:spring-cloud-alibaba-dubbo:2.2.0.RELEASE'
+
 }
 
 test {

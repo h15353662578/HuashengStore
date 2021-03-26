@@ -3,8 +3,7 @@ package com.hs.storemessage.service.impl;
 import com.hs.entity.CustomerMessage;
 import com.hs.storemessage.dao.CustomerMessageDao;
 import com.hs.storemessage.service.CustomerMessageService;
-import org.checkerframework.checker.units.qual.C;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;

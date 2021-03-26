@@ -19,7 +19,7 @@ public class CustomerController {
     @Resource
     private CustomerService customerService;
 
-    @RequestMapping(value = "/add",method = RequestMethod.POST)
+    @GetMapping("/add")
     public void add(@RequestParam Customer customer){
         customerService.add(customer);
     }

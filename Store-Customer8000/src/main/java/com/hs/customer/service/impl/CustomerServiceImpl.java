@@ -6,6 +6,7 @@ import com.hs.customer.service.CustomerService;
 import com.hs.entity.Customer;
 import com.hs.entity.CustomerMessage;
 import io.seata.spring.annotation.GlobalTransactional;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -35,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
         return new BCryptPasswordEncoder();
     }
 
-    @Resource
+    @Reference
     private CustomerMessageService customerMessageService;
 
 

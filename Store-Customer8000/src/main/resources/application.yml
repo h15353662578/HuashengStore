@@ -11,7 +11,7 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.195.129:80
-        service: customer
+        service: customer-service
     alibaba:
       seata:
         tx-service-group: hs_store_group
@@ -25,3 +25,9 @@ logging:
   level:
     io:
       seata: info
+
+dubbo:
+  application:
+    qos-enable: false #关闭dubbo在线运维工具
+  cloud:
+    subscribed-services: store-message-service  #订阅的服务名称,多个服务之间通过,分割

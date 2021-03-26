@@ -1,7 +1,7 @@
 package com.hs.customer.service;
 
 import com.hs.entity.CustomerMessage;
-import org.springframework.cloud.openfeign.FeignClient;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * @Description:
  */
 
-@FeignClient(value = "customer-message-service")
+@Service
 public interface CustomerMessageService {
 
     @RequestMapping(value = "/userMessage/add" ,method = RequestMethod.POST)

@@ -1,7 +1,6 @@
 package com.hs.customer.service;
 
 import com.hs.entity.Customer;
-import org.springframework.cloud.openfeign.FeignClient;
 
 /**
  * @author Huasheng
@@ -10,7 +9,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  * @Description:
  */
 
-@FeignClient(value = "customer-service")
 public interface CustomerService {
 
     public void add(Customer customer);

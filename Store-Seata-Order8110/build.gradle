@@ -23,7 +23,7 @@ dependencies {
     implementation 'com.alibaba:druid-spring-boot-starter:1.2.4'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2.2.3.RELEASE'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2.2.3.RELEASE'
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.1'
+    implementation 'com.alibaba.cloud:spring-cloud-alibaba-dubbo:2.2.0.RELEASE'
 }
 
 test {
