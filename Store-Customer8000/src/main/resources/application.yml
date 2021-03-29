@@ -30,7 +30,7 @@ dubbo:
   application:
     qos-enable: false #关闭dubbo在线运维工具
     name: customer-service
-  scan:
-    base-packages: com.hs.customer
+  registry:
+    address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
   cloud:
-    subscribed-services: store-message-service  #订阅的服务名称,多个服务之间通过,分割
+    subscribed-services: customer-message-service  #订阅的服务名称,多个服务之间通过,分割

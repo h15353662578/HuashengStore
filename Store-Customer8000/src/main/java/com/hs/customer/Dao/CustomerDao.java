@@ -1,7 +1,7 @@
 package com.hs.customer.Dao;
 
 
-import com.hs.entity.Customer;
+import com.hs.customer.entity.Customer;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 /**

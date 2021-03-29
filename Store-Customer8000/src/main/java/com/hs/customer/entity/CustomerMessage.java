@@ -1,6 +1,4 @@
-package com.hs.entity;
-
-import lombok.Data;
+package com.hs.customer.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,10 +6,9 @@ import java.util.Date;
 /**
  * @author Huasheng
  * @Auther: 华生
- * @Date: 2021/03/23/15:44
- * @Description:用户详细信息
+ * @Date: 2021/03/29/9:24
+ * @Description:
  */
-
 public class CustomerMessage implements Serializable {
     private int customerId;
 

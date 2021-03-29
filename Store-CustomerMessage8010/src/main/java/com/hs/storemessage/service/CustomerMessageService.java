@@ -1,6 +1,7 @@
 package com.hs.storemessage.service;
 
-import com.hs.entity.CustomerMessage;
+
+import com.hs.storemessage.entity.CustomerMessage;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @Date: 2021/03/24/10:25
  * @Description:
  */
+
 public interface CustomerMessageService {
 
     public CustomerMessage findOne(String customerUserName);

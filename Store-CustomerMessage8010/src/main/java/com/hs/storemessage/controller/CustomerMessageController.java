@@ -1,8 +1,7 @@
 package com.hs.storemessage.controller;
 
-import com.hs.entity.CustomerMessage;
+import com.hs.storemessage.entity.CustomerMessage;
 import com.hs.storemessage.service.CustomerMessageService;
-import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,7 +30,7 @@ public class CustomerMessageController {
         return customerMessageService.findAll();
     }
 
-    @GetMapping("/add")
+    @RequestMapping ("/add")
     public void  add(CustomerMessage customerMessage){
         customerMessageService.add(customerMessage);
     }

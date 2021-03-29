@@ -32,10 +32,17 @@ dubbo:
     port: -1
     name: dubbo
   scan: # dubbo服务路径
-    base-packages: com.hs.storemessage.service
+    base-packages: com.hs.storemessage
   application:
+    name: customer-message-service #注册服务名称
     qos-enable: false #关闭dubbo在线运维工具
+
   registry:
-    address: spring-cloud://localhost #挂载到SpringCloud注册中心
+    address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
   cloud:
     subscribed-services: / #订阅的服务名称，默认订阅所有服务，provider无须订阅服务所以配置为
+
+feign:
+  hystrix:
+    enabled: false
+

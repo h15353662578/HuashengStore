@@ -1,6 +1,7 @@
 package com.hs.customer.service;
 
-import com.hs.entity.Customer;
+
+import com.hs.customer.entity.Customer;
 
 /**
  * @author Huasheng

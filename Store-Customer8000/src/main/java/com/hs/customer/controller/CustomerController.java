@@ -1,7 +1,7 @@
 package com.hs.customer.controller;
 
+import com.hs.customer.entity.Customer;
 import com.hs.customer.service.CustomerService;
-import com.hs.entity.Customer;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

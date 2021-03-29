@@ -1,9 +1,9 @@
 package com.hs.storemessage.service.impl;
 
-import com.hs.entity.CustomerMessage;
 import com.hs.storemessage.dao.CustomerMessageDao;
+import com.hs.storemessage.entity.CustomerMessage;
 import com.hs.storemessage.service.CustomerMessageService;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -15,7 +15,7 @@ import java.util.List;
  * @Date: 2021/03/24/10:26
  * @Description:
  */
-@Service
+@DubboService(timeout = 10000,group = "customer-message-service")
 public class CustomerMessageServiceImpl implements CustomerMessageService {
 
     @Resource
