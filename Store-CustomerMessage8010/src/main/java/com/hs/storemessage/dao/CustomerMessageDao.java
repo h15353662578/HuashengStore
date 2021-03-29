@@ -1,6 +1,6 @@
 package com.hs.storemessage.dao;
 
-import com.hs.storemessage.entity.CustomerMessage;
+import com.hs.entity.CustomerMessage;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

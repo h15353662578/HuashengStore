@@ -1,6 +1,6 @@
 package com.hs.storemessage.controller;
 
-import com.hs.storemessage.entity.CustomerMessage;
+import com.hs.entity.CustomerMessage;
 import com.hs.storemessage.service.CustomerMessageService;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +30,7 @@ public class CustomerMessageController {
         return customerMessageService.findAll();
     }
 
-    @RequestMapping ("/add")
+    @GetMapping ("/add")
     public void  add(CustomerMessage customerMessage){
         customerMessageService.add(customerMessage);
     }

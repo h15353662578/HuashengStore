@@ -1,11 +1,11 @@
 package com.hs.storemessage;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author Huasheng
@@ -14,7 +14,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Description:
  */
 
-@EnableFeignClients(value = "com.hs.storemessage.service")
+@EntityScan(value = "com.hs.entity")
+@EnableDubbo
 @EnableDiscoveryClient
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 public class StoreMessage8010 {

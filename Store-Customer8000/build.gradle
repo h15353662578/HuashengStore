@@ -11,6 +11,7 @@ repositories {
 
 
 [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+jar.enabled=true
 
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.16'
@@ -27,11 +28,13 @@ dependencies {
     }
     implementation 'io.seata:seata-all:1.4.1'
     implementation 'com.alibaba:druid-spring-boot-starter:1.2.4'
-    implementation project(":Store-Common")
-//    implementation 'com.alibaba.cloud:spring-cloud-alibaba-dubbo:2.2.0.RELEASE'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:2.2.3.RELEASE'
     implementation 'com.alibaba.cloud:spring-cloud-starter-dubbo:2.2.5.RELEASE'
     implementation 'org.apache.dubbo:dubbo-registry-nacos:2.7.8'
+    implementation 'com.alibaba.nacos:nacos-client:1.4.1'
+    implementation project(":Store-Common")
+    implementation project(":Store-CustomerMessage8010")
+
 }
 
 test {

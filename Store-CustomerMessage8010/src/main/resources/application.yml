@@ -19,8 +19,9 @@ spring:
     name: customer-message-service
 
 mybatis-plus:
-    configuration:
+  configuration:
       log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.hs.entity
 
 logging:
   level:
@@ -36,9 +37,8 @@ dubbo:
   application:
     name: customer-message-service #注册服务名称
     qos-enable: false #关闭dubbo在线运维工具
-
   registry:
-    address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
+      address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
   cloud:
     subscribed-services: / #订阅的服务名称，默认订阅所有服务，provider无须订阅服务所以配置为
 

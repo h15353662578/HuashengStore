@@ -1,7 +1,8 @@
 package com.hs.storemessage.service;
 
 
-import com.hs.storemessage.entity.CustomerMessage;
+
+import com.hs.entity.CustomerMessage;
 
 import java.util.List;
 

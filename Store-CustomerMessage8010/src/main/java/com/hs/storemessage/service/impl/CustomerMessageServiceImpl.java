@@ -1,7 +1,7 @@
 package com.hs.storemessage.service.impl;
 
+import com.hs.entity.CustomerMessage;
 import com.hs.storemessage.dao.CustomerMessageDao;
-import com.hs.storemessage.entity.CustomerMessage;
 import com.hs.storemessage.service.CustomerMessageService;
 import org.apache.dubbo.config.annotation.DubboService;
 

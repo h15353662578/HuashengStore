@@ -1,15 +1,13 @@
 package com.hs.customer.service.impl;
 
 import com.hs.customer.Dao.CustomerDao;
-import com.hs.customer.entity.Customer;
-import com.hs.customer.entity.CustomerMessage;
-import com.hs.customer.service.CustomerMessageService;
 import com.hs.customer.service.CustomerService;
+import com.hs.entity.Customer;
+import com.hs.entity.CustomerMessage;
+import com.hs.storemessage.service.CustomerMessageService;
 import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.dubbo.config.annotation.Reference;
-import org.apache.dubbo.config.annotation.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import lombok.extern.slf4j.Slf4j;
 

@@ -6,7 +6,7 @@ spring:
     url: jdbc:mysql://localhost:3306/store?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 000000
-#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       discovery:
@@ -16,7 +16,8 @@ spring:
       seata:
         tx-service-group: hs_store_group
   application:
-    name: customer
+    name: customer-service
+
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
@@ -27,10 +28,18 @@ logging:
       seata: info
 
 dubbo:
+  protocol: # name:采用的协议名称 port:-1代表自动选择端口
+    port: -1
+    name: dubbo
   application:
+    name: customer-service #注册服务名称
     qos-enable: false #关闭dubbo在线运维工具
-    name: customer-service
   registry:
     address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
   cloud:
-    subscribed-services: customer-message-service  #订阅的服务名称,多个服务之间通过,分割
+    subscribed-services: customer-message-service #订阅的服务名称，默认订阅所有服务，provider无须订阅服务所以配置为
+
+feign:
+  hystrix:
+    enabled: false
+
