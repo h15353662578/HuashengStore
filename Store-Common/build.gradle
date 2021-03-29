@@ -11,6 +11,8 @@ repositories {
 dependencies {
     implementation 'org.projectlombok:lombok:1.18.16'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE'
+    implementation 'org.springframework:spring-web:5.3.4'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.4.0'
 }
 
 test {

@@ -1,5 +1,6 @@
-package com.hs.config;
+package com.hs.customer.seata;
 
+import com.hs.config.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,10 +11,9 @@ import java.sql.SQLIntegrityConstraintViolationException;
 /**
  * @author Huasheng
  * @Auther: 华生
- * @Date: 2021/03/29/16:12
+ * @Date: 2021/03/29/17:16
  * @Description:
  */
-
 @ControllerAdvice
 @Slf4j
 public class CommonExceptionHandler {
