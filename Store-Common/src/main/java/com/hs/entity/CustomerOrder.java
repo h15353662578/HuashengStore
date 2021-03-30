@@ -3,6 +3,7 @@ package com.hs.entity;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * @author Huasheng
@@ -14,15 +15,15 @@ import java.io.Serializable;
 @Data
 public class CustomerOrder implements Serializable {
 
-    private Integer id;
+    private Integer xid;
 
-    private String userId;
+    private Long customerId;
 
-    private String productId;
+    private Long productId;
 
-    private String count;
+    private Integer count;
 
-    private Integer money;
+    private BigDecimal money;
 
     private String status;
 }

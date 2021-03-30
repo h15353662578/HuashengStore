@@ -1,8 +1,8 @@
 server:
-  port: 8200
+  port: 8100
 spring:
   application:
-    name: store-customerAccount-service
+    name: customer-account-service
   cloud:
     alibaba:
       seata:
@@ -10,20 +10,29 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.195.129:80
-    sentinel:
-      transport:
-        dashboard: 192.168.195.129:8858
-        port: 8719
-      datasource:
-        ds1:
-          nacos:
-            server-addr: 192.168.195.129:80
-            dataId: store-customerAccount-service
-            groupId: DEFAULT_GROUP
-            data-type: json
-            rule-type: flow
+        service: customer-account-service
+
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/customer_account?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 000000
+
+dubbo:
+  protocol: # name:采用的协议名称 port:-1代表自动选择端口
+    port: -1
+    name: dubbo
+  scan: # dubbo服务路径
+    base-packages: com.hs.service
+  application:
+    name: customer-account-service #注册服务名称
+    qos-enable: false #关闭dubbo在线运维工具
+  registry:
+    address: nacos://192.168.195.129:80 #挂载到Nacos注册中心
+  cloud:
+    subscribed-services: / #订阅的服务名称，默认订阅所有服务，provider无须订阅服务所以配置为
+
+logging:
+  level:
+    io:
+      seata: info
